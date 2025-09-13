@@ -10,8 +10,8 @@ export default function App() {
     return(
       <SidebarProvider>
         <AppSidebar />
+        <SidebarTrigger />
         <main>
-          <SidebarTrigger />
           <BrowserRouter>
             <Routes>
                   {navBarItems.map((item) => (

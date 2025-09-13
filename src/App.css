@@ -1,7 +1,16 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     background-color: #000;
     color: #eee;
     font-family: system-ui;
+}
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
