@@ -1,42 +1,25 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { invoke } from '@tauri-apps/api/core';
-import NavBar from './components/NavBar';
+import { SideBarItem, getSideBarItems } from './components/side_bar/SideBarItemsService';
+import { SidebarProvider, SidebarTrigger } from './components/ui/sidebar';
+import { AppSidebar } from './components/side_bar/AppSideBar';
 
-function Home() {
+export default function App() {
+    const navBarItems: SideBarItem[] = getSideBarItems();
 
-  function handleClick() {
-    invoke('macro_test');
-  }
-
-  return (<div>
-      <h1 className='font-semibold text-3xl'>Home Page</h1>
-      <button onClick={handleClick} className='p-2 border-2 border-black cursor-pointer'>Click me to see magic... heh</button>
-    </div>);
-}
-
-function About() {
-  return <h1 className='font-semibold text-3xl'>About Page</h1>;
-}
-
-function Contact() {
-  return <h1 className='font-semibold text-3xl'>Contact Page</h1>;
-}
-
-function App() {
     return(
-        <BrowserRouter>
-            <NavBar />
-
-            <main>
-              <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/create-macro" element={<About />} />
-                  <Route path="/contact" element={<Contact />} />
-              </Routes>
-            </main>
-        </BrowserRouter>
+      <SidebarProvider>
+        <AppSidebar />
+        <main>
+          <SidebarTrigger />
+          <BrowserRouter>
+            <Routes>
+                  {navBarItems.map((item) => (
+                    <Route key={item.title} path={item.url} element={<item.component />} />
+                  ))}
+            </Routes>
+          </BrowserRouter>
+        </main>
+      </SidebarProvider>
     );
 }
-
-export default App;

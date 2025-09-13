@@ -1,70 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
     background-color: #000;
     color: #eee;
     font-family: system-ui;
-}
-
-main {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.routerNav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-color: #2f2f2f;
-    padding: 0 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 50;
-    display: grid;
-    grid-column: auto;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.routerNav a {
-    border: 1px solid #0f0f0f;
-    color: #0f0f0f;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: all 0.9s ease;
-}
-
-.routerNav a:hover {
-    background-color: #0f0f0f;
-    color: #fff;
-    transition: all 0.3s ease;
-    animation: color 5s infinite;
-}
-
-@keyframes color {
-    0% {
-        color: #ff0000;
-    }
-    20% {
-        color: #00ff00;
-    }
-    40% {
-        color: #0000ff;
-    }
-    60% {
-        color: #ffff00;
-    }
-    80% {
-        color: #00ffff;
-    }
-    100% {
-        color: #ff00ff;
-    }
 }
