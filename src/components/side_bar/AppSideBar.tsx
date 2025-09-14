@@ -8,7 +8,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { getSideBarItems, SideBarItem } from "./SideBarItemsService";
+import { getSideBarItems, SideBarItem } from "../../services/SideBarItemsService";
 
 // Menu items.
 const items: SideBarItem[] = getSideBarItems();

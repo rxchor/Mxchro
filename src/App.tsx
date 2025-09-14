@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { SideBarItem, getSideBarItems } from './components/side_bar/SideBarItemsService';
+import { SideBarItem, getSideBarItems } from './services/SideBarItemsService';
 import { SidebarProvider, SidebarTrigger } from './components/ui/sidebar';
 import { AppSidebar } from './components/side_bar/AppSideBar';
 

@@ -2,7 +2,8 @@
 import { AboutPage } from "@/pages/AboutPage";
 import { ContactPage } from "@/pages/ContactPage";
 import { HomePage } from "@/pages/HomePage";
-import { Home, Inbox, Settings } from "lucide-react"
+import MacroForm from "@/pages/MacroForm";
+import { Home, Inbox, Settings, icons } from "lucide-react"
 import React from "react";
 
 export interface SideBarItem {
@@ -31,6 +32,12 @@ const items: SideBarItem[] = [
     url: "/about",
     icon: Settings,
     component: AboutPage
+  }, 
+  {
+    title: "Create Macro",
+    url: "/create-macro",
+    icon: icons.Plus,
+    component: MacroForm
   }
 ]
 
