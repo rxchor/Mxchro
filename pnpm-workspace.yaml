@@ -1,0 +1,7 @@
+minimumReleaseAge: 1440 # 24 horas desde release para instalar
+
+# Para añadir exceciones seria lo siguiente:
+# 
+# minimumReleaseAgeExclude:
+#   - react
+#   - react-dom
