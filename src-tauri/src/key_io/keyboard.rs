@@ -35,6 +35,5 @@ impl Keyboard {
         return unsafe { 
             MapVirtualKeyA(vk as u32, MAPVK_VK_TO_VSC) as u8
         }
-
     }
 }

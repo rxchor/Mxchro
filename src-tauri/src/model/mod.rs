@@ -1,2 +1,3 @@
-pub mod Mode;
-pub mod Macro;
+pub mod key_event;
+pub mod key_macro;
+pub mod key_mode;

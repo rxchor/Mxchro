@@ -1,4 +1,6 @@
 mod key_io;
+mod model;
+
 use std::{thread, time::Duration};
 
 use windows::Win32::UI::Input::KeyboardAndMouse;
